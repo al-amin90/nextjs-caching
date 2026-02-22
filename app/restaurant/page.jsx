@@ -1,11 +1,17 @@
+import { cookies, headers } from "next/headers";
 import React from "react";
 
 const StaticRenderingPage = async () => {
+  // const cookies = cookies();
+  // const header = headers();
+
   const res = await fetch(
     "https://fakerestaurantapi.runasp.net/api/Restaurant",
+    // { cache: "no-store" },
+    { next: { revalidate: 10 } },
   );
-
   const restaurants = await res.json();
+  console.log("restaurants", restaurants);
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 px-6 py-10">
@@ -14,9 +20,7 @@ const StaticRenderingPage = async () => {
         <h1 className="text-3xl md:text-4xl font-bold text-emerald-400">
           🍽️ Cache করা Restaurant List
         </h1>
-        <p className="text-gray-400 mt-2">Static Rendering • Cache enabled</p>
-
-        <p className="mt-3 text-sm text-gray-500">
+        <p className="mt-3 text-sm text-white-500">
           সময়: {new Date().toLocaleTimeString("bn-BD")}
         </p>
       </div>

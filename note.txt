@@ -1,0 +1,46 @@
+1. Fundamentals
+
+=: what is caching? jilipi 100 user cach 
+=: why caching needed in web application? 
+  akta user asle ja hoi
+=> user => api call => db query => data procces => page banao => user ke patao
+10000 ta user akoi somoi asle ?
+
+=: caching korar suvida ki? 
+    *. performance 
+    *. server load 
+    *. scalability
+    *. server cost kom porbe
+
+2. Next.js 16 Caching System
+
+=: static site redening ki? => akta boi print, akta kora holo sobai se porlo
+ =>  show exjample!
+
+==: static side render kotai use korbo?
+    *. blog post
+    *. marketing page
+    *. documentation
+    *. about us page
+
+=: server site/Dynamic redening? => build like static =. use > server > databae> html file
+ =>  show exjample!
+
+==: কখন ব্যবহার করবে:
+    *. User-এর Dashboard (প্রত্যেকের আলাদা data)
+    *. Shopping Cart
+    *. Real-time stock price
+    *. User profile page
+
+static side rendering||server site rendering => 2tai kintu server side render kore 
+ader pre-rendering bola hoi
+ake rendering o bola hoi
+
+
+=: how make a component SSR Next.js কীভাবে বোঝে Dynamic করতে হবে
+    1. {cache: 'no-store'} 
+    2.  const cookies = cookies();
+    3.   const header = headers()
+    4. searchParams
+
+=: Data Cache (App Router) @@@@@@ go to next js

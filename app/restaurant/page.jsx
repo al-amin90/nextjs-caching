@@ -8,10 +8,11 @@ const StaticRenderingPage = async () => {
   const res = await fetch(
     "https://fakerestaurantapi.runasp.net/api/Restaurant",
     // { cache: "no-store" },
-    { next: { revalidate: 10 } },
+    // { next: { revalidate: 10 } },=>10 second por por server theke new data nibe
+    { next: { tags: ["restaurant"] } },
   );
   const restaurants = await res.json();
-  console.log("restaurants", restaurants);
+  console.log("restaurants", restaurants[0]);
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 px-6 py-10">

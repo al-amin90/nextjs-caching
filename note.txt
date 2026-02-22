@@ -43,4 +43,11 @@ ake rendering o bola hoi
     3.   const header = headers()
     4. searchParams
 
-=: Data Cache (App Router) @@@@@@ go to next js
+=: Data Cache (App Router) @@@@@@ go to next js website and explain
+
+3. Practical Implementation (Live Coding Required)
+
+=: revalidate 
+=> go to next js website & show console.log(), 304 , timestamps,
+এটা ISR (Incremental Static Regeneration) — এক মিনিটে cache করো, পরে নতুন করো।
+

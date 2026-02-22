@@ -51,3 +51,9 @@ ake rendering o bola hoi
 => go to next js website & show console.log(), 304 , timestamps,
 এটা ISR (Incremental Static Regeneration) — এক মিনিটে cache করো, পরে নতুন করো।
 
+
+=: revalidateTag()
+{ next: { tags: ["restaurant"] } },
+
+=: revalidateTag()
+{ next: { tags: ["restaurant"] } },

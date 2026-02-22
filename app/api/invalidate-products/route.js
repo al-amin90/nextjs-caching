@@ -1,8 +1,9 @@
-import { revalidateTag } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 
 export async function POST() {
-  revalidateTag("restaurant");
+  // revalidateTag("restaurant");
+  revalidatePath("/restaurant");
 
   return NextResponse.json({
     message: "post api is hit",

@@ -57,3 +57,22 @@ ake rendering o bola hoi
 
 =: revalidateTag()
 { next: { tags: ["restaurant"] } },
+
+=: use cache
+const getProductsData = async () => {
+  "use cache";
+
+  const res = await fetch(
+    "https://fakerestaurantapi.runasp.net/api/Restaurant",
+  );
+  const restaurants = await res.json();
+
+  return restaurants;
+};
+
+const nextConfig: NextConfig = {
+  /* config options here */
+  experimental: {
+    cacheComponents: true,
+  },
+};

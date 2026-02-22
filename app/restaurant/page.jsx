@@ -1,18 +1,29 @@
-import { cookies, headers } from "next/headers";
 import React from "react";
+
+const getProductsData = async () => {
+  "use cache";
+
+  const res = await fetch(
+    "https://fakerestaurantapi.runasp.net/api/Restaurant",
+  );
+  const restaurants = await res.json();
+
+  return restaurants;
+};
 
 const StaticRenderingPage = async () => {
   // const cookies = cookies();
   // const header = headers();
 
-  const res = await fetch(
-    "https://fakerestaurantapi.runasp.net/api/Restaurant",
-    // { cache: "no-store" },
-    // { next: { revalidate: 10 } },=>10 second por por server theke new data nibe
-    { next: { tags: ["restaurant"] } },
-  );
-  const restaurants = await res.json();
-  console.log("restaurants", restaurants[0]);
+  // const res = await fetch(
+  //   "https://fakerestaurantapi.runasp.net/api/Restaurant",
+  //   // { cache: "no-store" },
+  //   // { next: { revalidate: 10 } },=>10 second por por server theke new data nibe
+  //   { next: { tags: ["restaurant"] } },
+  // );
+  // const restaurants = await res.json();
+  // console.log("restaurants", restaurants[0]);
+  const restaurants = await getProductsData();
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 px-6 py-10">

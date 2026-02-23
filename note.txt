@@ -76,3 +76,22 @@ const nextConfig: NextConfig = {
     cacheComponents: true,
   },
 };
+
+5. Common Mistakes
+=: Over-caching issues? ভুল! User SPEFIC User dashboard (profile, notifications) cache করে ফেললে use dynamic rendering
+
+=: Stale data problems? ভুল! -24 HOURS revalidate time অনেক বেশি ৫ মিনিট যথেষ্ট
+=: When to use dynamic rendering? Payment page, cach allocation bNKING SYSTWM , TRANSION
+=: When NOT to cache =>  ATTENEDNCE , SMS LOGS , EXAM REPORTS, AUTH LOGIN , ORDERS, COUNTERS
+ Admin product price বদলালো
+→ কিন্তু revalidateTag() call করা হয়নি
+→ Users ঘণ্টার পর ঘণ্টা পুরনো price দেখছে
+→ ব্যবসায়িক ক্ষতি! 💸
+
+=: Cache invalidation strategy mistakes
+    “Cache invalidate করা পরে দেখবো”
+    Production এ:
+    Cache clear করার endpoint নাই
+    Tag ভুল নাম দেওয়া
+    Mutiple fetch → one tag
+    One fetch → multiple tags

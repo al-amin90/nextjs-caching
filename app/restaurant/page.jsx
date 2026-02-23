@@ -32,10 +32,10 @@ const StaticRenderingPage = async () => {
         <h1 className="text-3xl md:text-4xl font-bold text-emerald-400">
           🍽️ Cache করা Restaurant List
         </h1>
-        <p className="mt-3 text-sm text-white-500">
-          সময়: {new Date().toLocaleTimeString("bn-BD")}
-        </p>
+        <p className="mt-3 text-sm text-white-500">সময়:</p>
       </div>
+
+      {/* //{new Date().toLocaleTimeString("bn-BD")} */}
 
       {/* ________:) cards are here */}
       <div className="max-w-7xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

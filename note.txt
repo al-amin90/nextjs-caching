@@ -1,9 +1,11 @@
 1. Fundamentals
 
 =: what is caching? jilipi 100 user cach 
+
 =: why caching needed in web application? 
   akta user asle ja hoi
 => user => api call => db query => data procces => page banao => user ke patao
+
 10000 ta user akoi somoi asle ?
 
 =: caching korar suvida ki? 
@@ -23,7 +25,7 @@
     *. documentation
     *. about us page
 
-=: server site/Dynamic redening? => build like static =. use > server > databae> html file
+=: server site/Dynamic         redening? => build like static =. use > server > databae> html file
  =>  show exjample!
 
 ==: কখন ব্যবহার করবে:
@@ -41,7 +43,7 @@ ake rendering o bola hoi
     1. {cache: 'no-store'} 
     2.  const cookies = cookies();
     3.   const header = headers()
-    4. searchParams
+    4. searchParams                                         
 
 =: Data Cache (App Router) @@@@@@ go to next js website and explain
 
